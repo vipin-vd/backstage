@@ -1,0 +1,85 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "name": "vscode-jest-tests.v2",
+            "request": "launch",
+            "args": [
+              "repo",
+              "test",
+              "--runInBand",
+              "--watchAll=false",
+              "--testNamePattern",
+              "",
+              "--runTestsByPath",
+              "${file}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "program": "${workspaceFolder}/node_modules/.bin/backstage-cli",
+            "cwd": "${workspaceFolder}"
+          },
+          {
+            "name": "Start Backend",
+            "type": "node",
+            "request": "launch",
+            "args": [
+              "package",
+              "start"
+            ],
+            "env": {
+              "LOG_LEVEL": "debug",
+              "NODE_OPTIONS": "--no-node-snapshot"
+            },
+            "cwd": "${workspaceFolder}/packages/backend",
+            "program": "${workspaceFolder}/node_modules/.bin/backstage-cli",
+            "skipFiles": [
+              "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+          },
+          {
+            "name": "Start Dev",
+            "request": "launch",
+            "runtimeArgs": [
+              "dev"
+            ],
+            "runtimeExecutable": "yarn",
+            "outputCapture": "std",
+            "skipFiles": [
+              "<node_internals>/**"
+            ],
+            "env": {
+              "LOG_LEVEL": "debug",
+              "NODE_OPTIONS": "--no-node-snapshot"
+            },
+            "type": "node",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+          },
+          {
+            "name": "Start Public",
+            "type": "node",
+            "request": "launch",
+            "args": [
+              "package",
+              "start"
+            ],
+            "env": {
+              "LOG_LEVEL": "debug",
+              "NODE_OPTIONS": "--no-node-snapshot"
+            },
+            "cwd": "${workspaceFolder}/packages/app",
+            "program": "${workspaceFolder}/node_modules/.bin/backstage-cli",
+            "skipFiles": [
+              "<node_internals>/**"
+            ],
+            "console": "integratedTerminal"
+          },
+    ]
+}
