@@ -1,5 +1,5 @@
 app:
-  title: Scaffolded Backstage App
+  title: Backstage App
   baseUrl: http://localhost:3000
 
 organization:
@@ -42,6 +42,11 @@ integrations:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
     #   token: ${GHE_TOKEN}
+  gitea:
+    - host: ${GITEA_HOST}
+      username: ${GITEA_ADMIN}
+      password: ${GITEA_PWD}
+      baseUrl: ${GITEA_BASE_URL}
 
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
@@ -85,6 +90,12 @@ catalog:
     # Local example template
     - type: file
       target: ../../examples/template/template.yaml
+      rules:
+        - allow: [Template]
+
+    # Local example template for gitea
+    - type: file
+      target: ../../exercise/template/template.yaml
       rules:
         - allow: [Template]
 

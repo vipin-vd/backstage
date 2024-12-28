@@ -33,6 +33,6 @@
 **Situational**
 
 - [ ] Testing: All new and existing tests passed.
-- [ ] SysDocs: If this PR contains high-level changes to the architecture: I have updated the [**System documentation**](https://github.com/vwdfive/megatron-paas/tree/main/docs/system-architecture/megatron2)).
+- [ ] Docs: If this PR contains high-level changes to the architecture: I have updated the [**README.md**](../blob/main/README.md).
 - [ ] Migration: I have provided a migration path if my PR is a breaking change.
 - [x] This PR has been created with AI technologies (GitHub Copilot). <!--- Documenting this is a requirement for our use of Copilot, uncheck if you didn't use it.)  -->
