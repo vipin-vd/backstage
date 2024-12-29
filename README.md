@@ -27,4 +27,4 @@ yarn dev
 
 ## Exercises
 
-### [Gitea Excercise](./Exercise/gitea-exercise.md)
+### [Gitea Excercise](./exercise/gitea-exercise.md)
